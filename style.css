@@ -1,67 +1,53 @@
-body{
- align-items: center;
-
+body {
+  align-items: center;
 }
 
 .thumbnails-container {
-    display: flex;
-    height: 10rem;
-    width: 80%;
-    
-    overflow: scroll;
+  display: flex;
+  height: 10rem;
+  width: 80%;
 
-    border: 2px solid black;
-    padding: 1rem;
+  overflow: scroll;
+
+  border: 2px solid black;
+  padding: 1rem;
 }
 
 .thumbnails-container img {
-    flex-direction: row;
-    position: relative;
-
+  flex-direction: row;
+  position: relative;
 }
 
-
-
 h2 {
-
-    margin-top: 2rem;
-    font-style: oblique;
+  margin-top: 2rem;
+  font-style: oblique;
 }
 
 .back-to-top {
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
-    background-color: #c608b0;
-    color: rgb(5, 4, 4);
-    padding: 10px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 12px;
-    opacity: 0.7;
-    transition: opacity 0.3s;
-    z-index: 1000;
-        }
-          
-    .back-to-top:hover {
-    opacity: 4;
-        }
-    
-    html {
-    scroll-behavior: smooth;
-        }
-          
-
-
-
-@media (min-width:375px) and (max-width: 425px){
- .parent-content-container{
- flex-direction: row;
-    }
-
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background-color: #c608b0;
+  color: rgb(5, 4, 4);
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 12px;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+  z-index: 1000;
 }
 
+.back-to-top:hover {
+  opacity: 4;
+}
 
+html {
+  scroll-behavior: smooth;
+}
 
-  
-  
+@media (min-width: 375px) and (max-width: 425px) {
+  .parent-content-container {
+    flex-direction: row;
+  }
+}
