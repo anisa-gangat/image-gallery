@@ -1,34 +1,15 @@
 console.log("Hello There, this is my gallery!");
 
+console.log("Hello There, this is my gallery!");
+
 let images = [
-  {
-    src: "./images/Pink033.jpg",
-    alt: "Pink Toys",
-  },
-  {
-    src: "./images/PlushToys.jpg",
-    alt: "Plush Toys",
-  },
-  {
-    src: "./images/ShelfToys.jpg",
-    alt: "Shelf Toys",
-  },
-  {
-    src: "./images/WToyS.jpg",
-    alt: "W Toys",
-  },
-  {
-    src: "./images/lego08.jpg",
-    alt: "Lego",
-  },
-  {
-    src: "./images/Cars05.jpg",
-    alt: "Cars",
-  },
-  {
-    src: "./images/ToyCartSales.jpg",
-    alt: "Cart Toys",
-  },
+  { src: "./images/Pink033.jpg", alt: "Pink Toys" },
+  { src: "./images/PlushToys.jpg", alt: "Plush Toys" },
+  { src: "./images/ShelfToys.jpg", alt: "Shelf Toys" },
+  { src: "./images/WToyS.jpg", alt: "W Toys" },
+  { src: "./images/lego08.jpg", alt: "Lego" },
+  { src: "./images/Cars05.jpg", alt: "Cars" },
+  { src: "./images/ToyCartSales.jpg", alt: "Cart Toys" },
 ];
 
 const thumbnailContainer = document.getElementById("thumbnailsContainer");
@@ -42,19 +23,14 @@ images.forEach(function (individualImage) {
   myNewImg.alt = individualImage.alt;
 
   myNewImg.addEventListener("click", function () {
-    mainBackgroundContainer.innerHTML = "./images/Pink033.jpg";
-    mainBackgroundContainer.innerHTML = "./images/PlushToys.jpg";
-    mainBackgroundContainer.innerHTML = "./images/ShelfToys.jpg";
-    mainBackgroundContainer.innerHTML = "./images/WToyS.jpg";
-    mainBackgroundContainer.innerHTML = "./images/Lego08.jpg";
-    mainBackgroundContainer.innerHTML = "./images/Cars05.jpg";
-    mainBackgroundContainer.innerHTML = "./images/ToyCartSales.jpg";
-
-    console.log("I've been clicked");
+    console.log("I've been clicked:", individualImage.alt);
+    mainBackgroundContainer.innerHTML = "";
 
     console.log("we have access to this:", individualImage);
     const backgroundImage = document.createElement("img");
     backgroundImage.src = individualImage.src;
+    backgroundImage.alt = individualImage.alt;
+    backgroundImage.style.width = "100%";
     mainBackgroundContainer.appendChild(backgroundImage);
   });
 
@@ -80,3 +56,6 @@ for (let index = 0; index < images.length; index++) {
   });
   thumbnailContainerForLoop.appendChild(myNewImg);
 }
+backgroundImage.onload = () => {
+  backgroundImage.classList.add("loaded");
+};

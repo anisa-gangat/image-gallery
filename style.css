@@ -23,6 +23,16 @@ h2 {
   font-style: oblique;
 }
 
+#backgroundImageContainer img {
+  transition: opacity 0.5s ease;
+  opacity: 0;
+  position: relative;
+}
+
+#backgroundImageContainer img.loaded {
+  opacity: 1;
+}
+
 .back-to-top {
   position: fixed;
   bottom: 40px;
